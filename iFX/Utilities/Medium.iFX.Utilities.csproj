@@ -10,7 +10,4 @@
         <PackageReference Include="protobuf-net.Grpc" Version="1.2.2" />
     </ItemGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\..\..\iFX\Utilities\Medium.iFX.Utilities.csproj" />
-    </ItemGroup>
 </Project>

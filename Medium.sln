@@ -5,6 +5,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutioniItems", "Solutioni
 		.editorconfig = .editorconfig
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
+		Directory.Packages.props = Directory.Packages.props
+		Directory.Build.props = Directory.Build.props
+		global.json = global.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Access", "Access", "{EB406E89-D712-4256-BE31-FBDEBC15F0E2}"
@@ -37,6 +40,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{1F875055-E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit", "Unit", "{299852A9-5253-4AF6-91AF-E87ECE927409}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medium.iFX.Utilities", "iFX\Utilities\Medium.iFX.Utilities.csproj", "{6803B6A0-2B9F-454C-9F4C-6288E617ACBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medium.iFX.ExportTool", "ExportTool\Medium.iFX.ExportTool.csproj", "{0CF4AD33-717C-407D-81DB-DC9B19C9DA0F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +60,8 @@ Global
 		{86423C92-FBFF-4006-9EBF-9A3A87AF2146} = {2D534703-78CC-4DA7-9800-15556663275A}
 		{C811F340-4350-4833-87D9-E6CFE47C48E6} = {2D534703-78CC-4DA7-9800-15556663275A}
 		{299852A9-5253-4AF6-91AF-E87ECE927409} = {1F875055-EAF0-40EE-A9DC-9F61441B0F26}
+		{6803B6A0-2B9F-454C-9F4C-6288E617ACBE} = {838C8484-2451-4740-9253-72A28DCD5B3C}
+		{0CF4AD33-717C-407D-81DB-DC9B19C9DA0F} = {838C8484-2451-4740-9253-72A28DCD5B3C}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C9F302FB-6A88-4567-9A72-94E8614C852F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -79,5 +88,13 @@ Global
 		{C811F340-4350-4833-87D9-E6CFE47C48E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C811F340-4350-4833-87D9-E6CFE47C48E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C811F340-4350-4833-87D9-E6CFE47C48E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6803B6A0-2B9F-454C-9F4C-6288E617ACBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6803B6A0-2B9F-454C-9F4C-6288E617ACBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6803B6A0-2B9F-454C-9F4C-6288E617ACBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6803B6A0-2B9F-454C-9F4C-6288E617ACBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CF4AD33-717C-407D-81DB-DC9B19C9DA0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CF4AD33-717C-407D-81DB-DC9B19C9DA0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CF4AD33-717C-407D-81DB-DC9B19C9DA0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CF4AD33-717C-407D-81DB-DC9B19C9DA0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
