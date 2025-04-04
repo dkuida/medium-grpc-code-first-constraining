@@ -1,0 +1,46 @@
+syntax = "proto3";
+package Medium.Manager.Feed.Interface.Messages.Constraint;
+
+message BaseRequest {
+   string RequestId = 1;
+}
+message BaseResponse {
+   bool Success = 1;
+}
+message Error {
+   int32 Level = 1;
+   string Description = 2;
+}
+message InheritingRequest {
+   string RequestId = 1;
+   string Message = 4;
+}
+message InheritingResponse {
+   bool Success = 1;
+   string Message = 2;
+}
+message OtherRequest {
+   string RequestId = 1;
+   string OtherProperty = 2;
+}
+message OtherResponse {
+   bool Success = 1;
+   string Message = 2;
+}
+message ResponseWrapper {
+   repeated Error Errors = 1;
+}
+message ResponseWrapper_InheritingResponse {
+   InheritingResponse Response = 2;
+}
+message ResponseWrapper_OtherResponse {
+   OtherResponse Response = 2;
+}
+service FeedManager {
+   rpc Base (BaseRequest) returns (BaseResponse);
+   rpc EmptyWrapper (InheritingRequest) returns (ResponseWrapper);
+   rpc Inheriting (OtherRequest) returns (OtherResponse);
+   rpc InheritingMore (InheritingRequest) returns (OtherResponse);
+   rpc OtherWrapper (InheritingRequest) returns (ResponseWrapper_InheritingResponse);
+   rpc Wrapper (InheritingRequest) returns (ResponseWrapper_OtherResponse);
+}

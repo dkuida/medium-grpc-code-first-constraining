@@ -44,6 +44,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medium.iFX.Utilities", "iFX
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medium.iFX.ExportTool", "ExportTool\Medium.iFX.ExportTool.csproj", "{0CF4AD33-717C-407D-81DB-DC9B19C9DA0F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Results", "Results", "{999C1238-8006-4913-A2C8-DFE8DB3B3CBF}"
+	ProjectSection(SolutionItems) = preProject
+		Results\Constraint.proto = Results\Constraint.proto
+		Results\Official.proto = Results\Official.proto
+		Results\Problem.proto = Results\Problem.proto
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

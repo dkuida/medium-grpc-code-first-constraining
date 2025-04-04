@@ -1,0 +1,50 @@
+syntax = "proto3";
+package Medium.Manager.Feed.Interface.Messages.Official;
+
+message BaseRequest {
+   string RequestId = 1;
+   oneof subtype {
+      OtherRequest OtherRequest = 101;
+      InheritingRequest InheritingRequest = 102;
+   }
+}
+message BaseResponse {
+   bool Success = 1;
+   oneof subtype {
+      OtherResponse OtherResponse = 101;
+      InheritingResponse InheritingResponse = 102;
+   }
+}
+message Error {
+   int32 Level = 1;
+   string Description = 2;
+}
+message InheritingRequest {
+   string CustomProperty = 3;
+}
+message InheritingResponse {
+   string Message = 2;
+}
+message OtherRequest {
+   string OtherProperty = 2;
+}
+message OtherResponse {
+   string Message = 2;
+}
+message ResponseWrapper {
+   repeated Error Errors = 1;
+}
+message ResponseWrapper_InheritingResponse {
+   BaseResponse Response = 2;
+}
+message ResponseWrapper_OtherResponse {
+   BaseResponse Response = 2;
+}
+service FeedManager {
+   rpc Base (BaseRequest) returns (BaseResponse);
+   rpc EmptyWrapper (BaseRequest) returns (ResponseWrapper);
+   rpc Inheriting (BaseRequest) returns (BaseResponse);
+   rpc InheritingMore (BaseRequest) returns (BaseResponse);
+   rpc OtherWrapper (BaseRequest) returns (ResponseWrapper_InheritingResponse);
+   rpc Wrapper (BaseRequest) returns (ResponseWrapper_OtherResponse);
+}
